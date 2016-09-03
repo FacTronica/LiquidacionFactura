@@ -233,6 +233,11 @@ $Totales["MntExe"]="0";
 # MONTO IVA                                                                                                    
 $Totales["IVA"]="1900";
 #  
+# Iva Propio
+# Las empresas que venden por cuenta de un mandatario, pueden opcional separar el IVA en propio y de terceros.
+# En todos estos casos el campo “IVA” debe contener el IVA total de la Factura
+$Totales["IVAProp"]="111";
+#  
 # Valor Neto Comisiones y Otros Cargos
 # Suma de detalle de Valores de Comisiones y Otros Cargos
 $Totales["ValComNeto"]="111";
@@ -264,6 +269,12 @@ $detalle["1"]["CodImpAdic"]="";
 $detalle["1"]["MontoItem"]="1000";
 $detalle["1"]["DescuentoPct"]="0";
 $detalle["1"]["DscItemPesos"]="0";
+#
+# Tipo Documento que se Liquida
+# Para liquidaciones se debe registrar el código del docto. que se liquida. (Ej: :30, 33, 35, 39, 56,etc.)
+$detalle["1"]["TpoDocLiq"]="0"; 
+#
+#
 $detalle["1"]["IndExe"]="0";
  
 ##############################################################                                                 
