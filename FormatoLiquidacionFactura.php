@@ -232,7 +232,19 @@ $Totales["MntExe"]="0";
 #                                                                                                              
 # MONTO IVA                                                                                                    
 $Totales["IVA"]="1900";
-#                                                                                                              
+#  
+# Valor Neto Comisiones y Otros Cargos
+# Suma de detalle de Valores de Comisiones y Otros Cargos
+$Totales["ValComNeto"]="111";
+#  
+# Valor Comisiones y Otros Cargos No Afectos o Exentos
+# Suma de detalles de valores de comisiones y otros cargos no afectos o exentos
+$Totales["ValComExe"]="111";
+#  
+# IVA Comisiones y Otros Cargos
+# Suma de detalle de IVA de Valor de Comisiones y Otros Cargos
+$Totales["ValComIVA"]="111";
+#
 # MONTO TOTAL BRUTO                                                                                            
 $Totales["MntTotal"]="11900";
 ##############################################################                                                 
