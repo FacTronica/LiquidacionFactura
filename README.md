@@ -23,7 +23,7 @@ Este proceso Consiste en generar un archivo de texto plano con el formato requer
 <br>-Datos de Timbraje
 <br>-Datos de Certificado
 <br>Ver Formato del archivo TXT para Factura Electrónica Afecta.
-<br>https://github.com/FacTronica/FacturaElectronicaAfecta/blob/master/FormatoFacturaElectronica.php
+<br>https://github.com/FacTronica/LiquidacionFactura/blob/master/FormatoLiquidacionFactura.php
 <br>
 <hr>
 <h3>Proceso 2: Enviar Archivo Txt</h3>
@@ -37,22 +37,22 @@ Para enviar el archivo plano TXT al servidor de Facturación se hace uso de libr
 <h3>Proceso 3: Recuperar el XML con TrackID:</h3>
 Este proceso es necesario para poder validar que el SII Chile haya recibido el documento emitido.
 <br><br><b>Recuperar archivo xml con Windows:</b>
-<br>c:\curl\curl.exe -o c:\curl\factura_folio777_tipo43_trackid.xml http://www.factronica.cl/servidores/servidor_v727/trackid/factura_folio777_tipo43_trackid.xml
+<br>c:\curl\curl.exe -o c:\curl\liquidacion_folio777_tipo43_trackid.xml http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43_trackid.xml
 <br><br><b>Recuperar Archivo Xml con Linux:</b>
-<br>curl -o factura_folio777_tipo43_trackid.xml http://www.factronica.cl/servidores/servidor_v727/trackid/factura_folio777_tipo43_trackid.xml
+<br>curl -o liquidacion_folio777_tipo43_trackid.xml http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43_trackid.xml
 <br>
 <hr>
 <h3>Proceso 4: Recuperar el PDF con Documento Electrónico:</h3>
 Este proceso es necesario para poder obtener una copia del pdf del documento electrónico.
 <br><br><b>Recuperar archivo Pdf con Windows:</b>
-<br>c:\curl\curl.exe -o c:\curl\factura_folio777_tipo43.pdf http://www.factronica.cl/servidores/servidor_v727/pdf/factura_folio777_tipo43.pdf
+<br>c:\curl\curl.exe -o c:\curl\liquidacion_folio777_tipo43.pdf http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43.pdf
 <br><br><b>Recuperar archivo Pdf con Linux:</b>
-<br>curl -o factura_folio777_tipo43.pdf http://www.factronica.cl/servidores/servidor_v727/pdf/factura_folio777_tipo43.pdf
+<br>curl -o liquidacion_folio777_tipo43.pdf http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43.pdf
 <br>
 <hr>
 <h3>Proceso 5: Recuperar el XML con Documento Electrónico:</h3>
 Este proceso es necesario para poder obtener una copia del xml del documento electrónico.
 <br><br><b>Recuperar archivo Xml con Windows:</b>
-<br>c:\curl\curl.exe -o c:\curl\factura_folio777_tipo43.xml http://www.factronica.cl/servidores/servidor_v727/xml/factura_folio777_tipo43.xml
+<br>c:\curl\curl.exe -o c:\curl\liquidacion_folio777_tipo43.xml http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43.xml
 <br><br><b>Recuperar archivo Xml con linux:</b>
-<br>curl -o factura_folio777_tipo43.xml http://www.factronica.cl/servidores/servidor_v727/xml/factura_folio777_tipo43.xml
+<br>curl -o liquidacion_folio777_tipo43.xml http://www.factronica.cl/servidores/servidor_v727/almacen_remoto/liquidacion_folio777_tipo43.xml
