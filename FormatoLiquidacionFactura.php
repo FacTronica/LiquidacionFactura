@@ -3,21 +3,23 @@
 ####### DATOS DEL SERVIDOR
 ##############################################################
 # URL DEL WEBSERVICE SERVIDOR EJ. http://www.factronica.cl/factronica_webservice_servidor_beta
-$CONFACTRONICA["URLHOST"]="http://190.107.177.194/~ws777777777/servidor001";
+$FACTRONICA["URLHOST"]="http://www.factronica.cl/servidores/servidor_v727";
 # SCRIPT DEL SERVIDOR EJ. index.php
-$CONFACTRONICA["URLFILE"]="index.php";
+$FACTRONICA["URLFILE"]="liquidacion_index.php";
 # PUERTO DE COMUNICACION ej.80
-$CONFACTRONICA["PORT"]="80";
+$FACTRONICA["PORT"]="80";
 # DEPURAR ej. 1
-$CONFACTRONICA["VERBOSE"]=1;
+$FACTRONICA["VERBOSE"]=1;
 # RETORNAR RESULTADOS ej. 1
-$CONFACTRONICA["RETURNTRANSFER"]=1;
+$FACTRONICA["RETURNTRANSFER"]=1;
 # TIEMPO MAXIMO ESPERA ej.30
-$CONFACTRONICA["TIMEOUT"]=30;
+$FACTRONICA["TIMEOUT"]=30;
 # ENCABEZADO DEL ENVIO ej. 0
-$CONFACTRONICA["HEADER"]=0; 
+$FACTRONICA["HEADER"]=0; 
 # ENVIAR ENCABEZADO EJ. true
-$CONFACTRONICA["HEADER_OUT"]=true;
+$FACTRONICA["HEADER_OUT"]=true;
+
+
 ##############################################################                                                 
 #######   PARAMETROS DE CONFIGURACIÓN                                                                          
 ##############################################################                                                 
@@ -46,44 +48,48 @@ $url_logo="";// utilizar url normal sin https ni url corta          https://goo.
 # URL DEL LOGO CENTRAL A INSERTAR EN EL PDF POR EJ. HTTP://www.domain.cl/logo.png  240X240 PIXELS              
 $url_logo_central="";                                                                                          
 #                                                                                                              
-# INDICA LA CANTIDAD DE DECIMALES A MOSTRAR EN EL PDF Y XML                                                    
-$decimales_item_unitario="0";                                                                                  
-#                                                                                                              
-# INDICA LA CANTIDAD DE ESPACIADO ENTRE CADA LINEA DEL DETALLE                                                 
-$espaciado_items="7";                                                                                          
+# INDICA LA CANTIDAD DE DECIMALES A MOSTRAR EN LA COLUMNA CANTIDAD DEL PDF
+$FACTRONICA["PDFDECIMALESCANTIDAD"]="0";
+#
+# INDICA LA CANTIDAD DE DECIMALES A MOSTRAR EN LA COLUMNA UNITARIO DEL PDF
+$FACTRONICA["PDFDECIMALESUNITARIO"]="";                                                                                 
 #                                                                                                              
 # NOMBRE DEL PROVEEDOR DE FACTURA ELECTRONICA QUE APARECE AL PIE DEL PDF                                       
 $nom_proveedor="FACTRONICA";                                                                                   
 #                                                                                                              
 # RUL DEL PROVEEDOR DE FACTURA ELECTRONICA QUE APARECE AL PIE DEL PDF                                          
 $url_proveedor="";                                                                            
+
 ##############################################################                                                 
 ####### NOMBRES DIRECTORIOS DE ALMACENAMIENTO LOCAL Y REMOTO                                                   
 ##############################################################                                                 
 # NOMBRE DE LA CARPETA LOCAL DE ALMACENAMIENTO                                                                 
-$CONFACTRONICA["FOLDERPDF"]="almacen_local";                                                                   
+$FACTRONICA["FOLDERPDF"]="almacen_local";                                                                   
 # NOMBRE DE LA CARPETA REMOTA DE ALMACENAMIENTO                                                                
-$CONFACTRONICA["FOLDERFILES"]="almacen_remoto";                                                                
+$FACTRONICA["FOLDERFILES"]="almacen_remoto";                                                                
                                                                                                                
-                                                                                                               
+      
+ 
+
+                                                                                                         
 ##############################################################                                                 
 #######                                                                                                        
 ##############################################################                                                 
 # NOMBRE DEL ARCHIVO PLANO QUE ESTA ENVIANDO                                                                   
-$CONFACTRONICA["FILETXT"]="envio_dte.txt";                                                                     
+$FACTRONICA["FILETXT"]="envio_dte.txt";                                                                     
                                                                                                                
                                                                                                                
 ##############################################################                                                 
 #######                                                                                                        
 ##############################################################                                                 
 # NOMBRE QUE SE LE QUIERE DAR EL ARCHIVO PDF                                                                   
-$CONFACTRONICA["FILEPDF"]="PDF_RUT89428000-K_TIPO33_FOLIO38.pdf";
+$FACTRONICA["FILEPDF"]="PDF_RUT89428000-K_TIPO43_FOLIO38.pdf";
 # NOMBRE QUE SE LE QUIERE DAR EL ARCHIVO PDF                                                                   
-$CONFACTRONICA["FILEPDFCLIENTE"]="PDFC_RUT89428000-K_TIPO33_FOLIO38.pdf";
+$FACTRONICA["FILEPDFCLIENTE"]="PDFC_RUT89428000-K_TIPO43_FOLIO38.pdf";
 # NOMBRE DEL ARCHIVO PNG CON LA IMAGEN DEL PDF417 (TED) TIMBRE ELECTRONICO SII CHILE                           
-$CONFACTRONICA["FILEPNG"]="PDF4189428000-K_TIPO33_FOLIO38.png";
+$FACTRONICA["FILEPNG"]="PDF4189428000-K_TIPO43_FOLIO38.png";
 # NOMBRE DEL ARCHIVO XML CON LA RESPUESTA DEL SII (TRACKID)                                                    
-$CONFACTRONICA["TRACKID"]="TRACKID_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["TRACKID"]="TRACKID_RUT89428000-K_TIPO43_FOLIO38.xml";
                                                                                                                
                                                                                                                
                                                                                                                
@@ -91,20 +97,20 @@ $CONFACTRONICA["TRACKID"]="TRACKID_RUT89428000-K_TIPO33_FOLIO38.xml";
 ####### NOMBRE DE ARCHIVOS XML POR FIRMAR                                                                      
 ##############################################################                                                 
 # NOMBRE DEL ARCHIVO DEL DTE POR FIRMAR                                                                        
-$CONFACTRONICA["DTEPORFIRMAR"]="DTEPORFIRMAR_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["DTEPORFIRMAR"]="DTEPORFIRMAR_RUT89428000-K_TIPO43_FOLIO38.xml";
 # NOMBRE DEL ARCHIVO DEL SET POR FIRMAR                                                                        
-$CONFACTRONICA["SETDTEPORFIRMAR"]="SETPORFIRMAR_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["SETDTEPORFIRMAR"]="SETPORFIRMAR_RUT89428000-K_TIPO43_FOLIO38.xml";
                                                                                                                
                                                                                                                
 ##############################################################                                                 
 ####### NOMBRE DE ARCHIVOS XML FIRMADOS                                                                        
 ##############################################################                                                 
 # NOMBRE DEL ARCHIVO DEL DTE FIRMADO                                                                           
-$CONFACTRONICA["DTEFIRMADO"]="DTEFIRMADO_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["DTEFIRMADO"]="DTEFIRMADO_RUT89428000-K_TIPO43_FOLIO38.xml";
 # NOMBRE DEL ARCHIVO DEL SET FIRMADO Y QUE SE ENVIARÁ AL CLIENTE AL MAIL INTERCAMBIO                           
-$CONFACTRONICA["SETDTEFIRMADO_CLIENTE"]="SETFIRMADOCLIENTE_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["SETDTEFIRMADO_CLIENTE"]="SETFIRMADOCLIENTE_RUT89428000-K_TIPO43_FOLIO38.xml";
 # NOMBBRE DEL ARCHIVO DEL SET FIRMADO Y QUE SE ENVIARA AL SII POR MEDIO DE WEBSERVICES                         
-$CONFACTRONICA["SETDTEFIRMADO_SII"]="SETFIRMADOSII_RUT89428000-K_TIPO33_FOLIO38.xml";
+$FACTRONICA["SETDTEFIRMADO_SII"]="SETFIRMADOSII_RUT89428000-K_TIPO43_FOLIO38.xml";
                                                                                                                
                                                                                                                
                                                                                                                
@@ -140,11 +146,13 @@ $IdDoc["FchEmis"]="2016-08-05";
 # FECHA DE VENCIMIENTO AAAA-MM-DD                                                                              
 $IdDoc["FchVenc"]="2016-08-05";
 #                                                                                                              
-# TEXTO CON FORMA DE PAGO                                                                                      
+# TEXTO CON LA CONDICIÓN DE PAGO, POR EJ. CONTADO, CONTRA ENTREGA, A 30 DÍAS FACTURACIÓN, ETC...
 $IdDoc["TermPagoGlosa"]="CONTADO";
+# TEXTO CON EL MEDIO DE PAGO, POR EJ. EFECTIVO, CHEQUE, TARJETA CRÉDITO, ETC...
+$IdDoc["MedioPago"]="EFECTIVO";
 #                                                                                                              
-# TIPO DE DOCUMENTO FV=33, ND=56, NC=61                                                                        
-$IdDoc["TipoDTE"]="33";
+# TIPO DE DOCUMENTO 
+$IdDoc["TipoDTE"]="43";
 #                                                                                                              
 # FOLIO DEL DOCUMENTO                                                                                          
 $IdDoc["Folio"]="245";
@@ -179,6 +187,10 @@ $Emisor["CmnaOrigen"]="PUNTA ARENAS";
 #                                                                                                              
 # CIUDAD EMISOR                                                                                                
 $Emisor["CiudadOrigen"]="PUNTA ARENAS";
+#                                                                                                              
+# Código del Vendedor - Glosa con identificador del vendedor
+# Adminite un máximo de 60 carácteres alfanumericos
+$Emisor["CdgVendedor"]="PERICO LOS PALOTES";
 #                                                                                                              
 # EMAIL EMISOR                                                                                                 
 $Emisor["CorreoEmisor"]="ventas1@MARKETING.cl";
@@ -217,6 +229,7 @@ $Receptor["Contacto"]="juan perez";
 # CORREO RECEPTOR                                                                                              
 $Receptor["CorreoRecep"]="contacto@factronica.cl";
 #                                                                                                              
+
 ##############################################################                                                 
 #######   TOTALES                                                                                              
 ##############################################################                                                 
@@ -232,140 +245,104 @@ $Totales["MntExe"]="0";
 #                                                                                                              
 # MONTO IVA                                                                                                    
 $Totales["IVA"]="1900";
-#  
-# Iva Propio
-# Las empresas que venden por cuenta de un mandatario, pueden opcional separar el IVA en propio y de terceros.
-# En todos estos casos el campo “IVA” debe contener el IVA total de la Factura
-$Totales["IVAProp"]="111";
-#  
-# Valor Neto Comisiones y Otros Cargos
-# Suma de detalle de Valores de Comisiones y Otros Cargos
-$Totales["ValComNeto"]="111";
-#  
-# Valor Comisiones y Otros Cargos No Afectos o Exentos
-# Suma de detalles de valores de comisiones y otros cargos no afectos o exentos
-$Totales["ValComExe"]="111";
-#  
-# IVA Comisiones y Otros Cargos
-# Suma de detalle de IVA de Valor de Comisiones y Otros Cargos
-$Totales["ValComIVA"]="111";
 #
+# Impuesto Adicional Tipo 24=Licores, Piscos, whisky, aguardiente, vinos licorosos o aromatizados
+$ImptoReten["24"]["TipoImp"]="24";
+# Tasa de Impuesto del Tipo 24
+$ImptoReten["24"]["TasaImp"]="31.5";
+# Monto de Impuesto del Tipo 24
+$ImptoReten["24"]["MontoImp"]="31500";
+#                                                                                                              
 # MONTO TOTAL BRUTO                                                                                            
 $Totales["MntTotal"]="11900";
+
 ##############################################################                                                 
 #######    DETALLE                                                                                             
 ##############################################################                                                 
 #                                                                                                              
 #                                                                                                              
 $detalle["1"]["NroLinDet"]="1";
-$detalle["1"]["NmbItem"]="";
-$detalle["1"]["DscItem"]="GALLETA TRITON";
+# Tipo Documento Liquidacion                                                                                                     
+$detalle["1"]["TpoDocLiq"]="30";
+# Nombre del Item
+$detalle["1"]["NmbItem"]="Nombre del item...";
+#
+$detalle["1"]["DscItem"]="Descripcion extendida del item......";
+# Tipo de Codigo
 $detalle["1"]["TpoCodigo"]="INT1";
+#
+$detalle["1"]["VlrCodigo"]="110223";
+# Unidad de Medida 3 caracteres por ej. UNI
 $detalle["1"]["UnmdItem"]="UNI";
+# Cantidad
 $detalle["1"]["QtyItem"]="2";
-$detalle["1"]["VlrCodigo"]="BA900-A";
-$detalle["1"]["PrcItem"]="500";
-$detalle["1"]["CodImpAdic"]="";
-$detalle["1"]["MontoItem"]="1000";
+# Precio Unitario
+$detalle["1"]["PrcItem"]="10000";
+# Subtotal
+$detalle["1"]["MontoItem"]="20000";
+# Descuento Porcentaje
 $detalle["1"]["DescuentoPct"]="0";
+# Descuento Pesos
 $detalle["1"]["DscItemPesos"]="0";
-#
-# Tipo Documento que se Liquida
-# Para liquidaciones se debe registrar el código del docto. que se liquida. (Ej: :30, 33, 35, 39, 56,etc.)
-$detalle["1"]["TpoDocLiq"]="0"; 
-#
-#
+# Switch indicador de item exento 1=si 0=no
 $detalle["1"]["IndExe"]="0";
+
+##################################################################                                                
+#######    REFERENCIAS DE FACTURACIÓN CONTRA NOTA DE PEDIDO/VENTA                                                                              
+##################################################################
+# Debe ir vacio
+$doc_referencia["1"]["IndGlobal"]="";    
+# Folio de la Nota de Pedido o Nota de venta
+$doc_referencia["1"]["FolioRef"]="3345";                                                  
+# 802 es el codigo para notas de pedido/venta
+$doc_referencia["1"]["TpoDocRef"]="802"; 
+# Comentario de la Referencia
+$doc_referencia["1"]["RazonRef"]="Nota de Pedido 3345";                                                           
+# El codigo de referencia Solo se utiliza en Nota Credito y Debito 1 2 3
+$doc_referencia["1"]["CodRef"]="";
+# Fecha de de emisión de la nota de pedido formato aaaa-mm-dd
+$doc_referencia["1"]["FchRef"]="2016-04-28";   
  
 ##############################################################                                                 
 #######   DATOS CERTIFICADO DE PERSONA QUE FIRMA Y ENVIA                                                       
 ##############################################################                                                 
-#                                                                                                              
-#                                                                                                              
 # MODULO DEL CERTIFICADO                                                                                       
-$certificado["Modulus"]="25M946l8R4x/8I/CvY5ZWUowngAmi2g/ACUOPL9yOvMuRJymHoVRY2cl+bIzirjI
-S09xOouvXL5lv5QzQiz/lkeF4fyWgisW+WEx/67oGbumUcqD1H1NFVYlg0Dd3Gw1
-vYTsRWa9XMBgAzaHktGEgaFegsVm/Hze0sjn52KRnXk=
-";
-#                                                                                                              
-#                                                                                                              
+$certificado["Modulus"]="nnnnnnnnnnn";                                                                           
 # EXPONENTE DEL CERTIFICADO                                                                                    
-$certificado["Exponent"]="AQAB
-";
-#                                                                                                              
-#                                                                                                              
+$certificado["Exponent"]="nnnn";                                                                                 
 # CERTIFICADO X509                                                                                             
-$certificado["X509Certificate"]="MIIGSzCCBTOgAwIBAgIKHynmewAAAASOcTANBgkqhkiG9w0BAQUFADCB0jELMAkG
-A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
-EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
-dHOWnoUV+lNNKKsfI0OTqQDvFQ5dasp+GhypO3LNGWfC5S9PZi246Q4/6HyXdF+U
-2DHgwUO0j729nP/SZ/w8G6GpJtsG8swp6TcLrftVTEyOlwya37O6bZGFJYHSzmMR
-/sppfb06gH1y+ONIYiyTPtjYJpPt8dMV/KVE/JW5uw==";
-#                                                                                                              
-#                                                                                                              
+$certificado["X509Certificate"]="nnnnnnnn";
 # LLAVE PRIVADA SIN CLAVE                                                                                      
-$certificado["PrivKey"]="-----BEGIN RSA PRIVATE KEY-----
-MIICXQIBAAKBgQDbkz3jqXxHjH/wj8K9jllZSjCeACaLaD8AJQ48v3I68y5EnKYe
-hVFjZyX5sjOKuMhLT3E6i69cvmW/lDNCLP+WR4Xh/JaCKxb5YTH/rugZu6ZRyoPU
-LRSUrqGdVXNw+3IoM+eNakT3ZxQ73P+TOoEtkteWhVzolU8rJGs2LW1InG9BAkBT
-hZ04Uhrtb6pOSEi7inMEpnUDraMP7lrfjJNAZ6N5j/jKpJG9JPSkbs/5cZqQeV3a
-AeuZh2qf2xgTEYHxdl35AkBRoBTl+zYP89XA+15foXQzLfLuTCeA3bWlMdgpVpeM
-Dj8kJefDsk1wryMlF7SPBXxAEIrTYUR91wgj21b5DYSK
------END RSA PRIVATE KEY-----";
-                                                                                                               
-                                                                                                               
-                                                                                                               
-                                                                                                               
+$certificado["PrivKey"]="nnnnnnn";
+
 ##############################################################                                                 
-#######   CARGAR DATOS DE TIMBRAJE DE FOLIOS                                                                   
+####### DATOS DE TIMBRAJE DE FOLIOS                                                                   
 ##############################################################                                                 
 # RUT EMISOR                                                                                                   
-$CAF["RE"]="777777-7";
-#                                                                                                              
-#                                                                                                              
+$CAF["RE"]="777777-7";                                                                                  
 # RAZON SOCIAL EMISOR                                                                                          
-$CAF["RS"]="PRUEBA LIMITADA";
-#                                                                                                              
-#                                                                                                              
+$CAF["RS"]="PRUEBA LIMITADA";                                                                                                              
 # TIPO DE DOCUMENTO                                                                                            
-$CAF["TD"]="33";
-#                                                                                                              
-#                                                                                                              
+$CAF["TD"]="43";
 # FOLIO DESDE                                                                                                  
-$CAF["RNG_D"]="1";
-#                                                                                                              
-#                                                                                                              
+$CAF["RNG_D"]="1";                                                                                         
 # FOLIO HASTA                                                                                                  
-$CAF["RNG_H"]="80";
-#                                                                                                              
-#                                                                                                              
+$CAF["RNG_H"]="80";                                                                                             
 # FECHA AUTORIZACION TIMBRAJE                                                                                  
-$CAF["FA"]="2016-07-29";
-#                                                                                                              
-#                                                                                                              
+$CAF["FA"]="2016-07-29";                                                                                            
 # MODULO LLAVE PRIVADA TIMBRAJE                                                                                
-$CAF["RSAPK_M"]="oLg1fXeWla8+UCYiRF2TjJaUMtsjE8B1iAhft89Z+nt28X/ZirKjLelHtLziOxPEqvhJZcC3mLTlUZmhUNn4FQ==";
-#                                                                                                              
-#                                                                                                              
+$CAF["RSAPK_M"]="nnnn";
 # MODULO EXPONENTE TIMBRAJE                                                                                    
-$CAF["RSAPK_E"]="Aw==";
-#                                                                                                              
-#                                                                                                              
+$CAF["RSAPK_E"]="nnnn";
 # INDICE DEL TIMBRAJE                                                                                          
-$CAF["RSAPK_IDK"]="300";
-#                                                                                                              
-#                                                                                                              
+$CAF["RSAPK_IDK"]="nnn";
 # FIRMA DEL TIMBRAJE                                                                                           
-$CAF["FRMA"]="m3Fbb+Qkb25+kbAwtU7Z9usUEv+yE4SV58PsLCWEHt1WJQNJGoIuGo86NhhyLCLqFRgHO1OC/u0o74LIRRifIg==";
-#                                                                                                              
-#                                                                                                              
+$CAF["FRMA"]="nnnnnn";
 # LLAVE PRIVADA DEL TIMBRAJE                                                                                   
-$CAF["RSASK"]="-----BEGIN RSA PRIVATE KEY----- MIIBOQIBAAJBAKC4NX13lpWvPlAmIkRdk4yWlDLbIxPAdYgIX7fPWfp7dvF/2Yq
-y oy3pR7S84jsTxKr4SWXAt5i05VGZoVDZ+BUCAQMCQGsleP5PubkffuAZbC2Tt7MP DXc8wg0q+QVa6nqKO/xRQM1X61tOVmUMAgvdjxd39wBLQjCs0VACVcb9Ay11EvMC 
-IQDOV+DHoqAGMIjct0V/NQhmmovllXLPBRBk3/nfbMOkGwIhAMdlmzDfHRtlzmfr qwxi12uP+4CHSq6boP/HJD0f5rePAiEAiY/rL8HABCBbPc+DqiNa7xGymQ5MigNg Qz/76kiCbWcCIQCE7md16hNnmTRFR8ddlzpHtVJVr4cfEmtVL21+FUR6XwIgJppW G8JRwJz6QFYnzfW/v/+JB/TKD6FHytwp4ODCvac= -----END RSA 
-PRIVATE KEY----- ";
-#                                                                                                              
-#                                                                                                              
+$CAF["RSASK"]="nnnnnnn";
 # LLAVE PUBLICA DEL TIMBRAJE                                                                                   
-$CAF["RSAPUBK"]="-----BEGIN PUBLIC KEY----- MFowDQYJKoZIhvcNAQEBBQADSQAwRgJBAKC4NX13lpWvPlAmIkRdk4yWlDLbIxPA dYgIX7fPWfp7dvF/2Yqyoy3pR7S84jsTxKr4SWXAt5i05VGZoVDZ+BUCAQM= -----END PUBLIC KEY----- ";
+$CAF["RSAPUBK"]="nnnnnnn";
+
+#
+$FACTRONICA["HTMLMAIL"]="<b>Este es un Ejemplo</b><I>de como armar el cuerpo del mail</i>";
 ?>
